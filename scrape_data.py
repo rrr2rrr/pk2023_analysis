@@ -84,7 +84,7 @@ def scrape_abitu(spec_select):
             raise Exception('Please, rerun script')
         DIR = f'cache/{link.split("_")[0]}'
         if not os.path.exists(DIR):
-            os.mkdir(DIR)
+            os.makedirs(DIR)
         with open(f'{DIR}/{link}.html', 'w') as f:
             f.write(response.text)
         soup = BeautifulSoup(response.text, features="lxml")

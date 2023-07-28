@@ -1,2 +1,4 @@
 debug.ipynb
-cache/*
+cache
+.idea/
+venv
